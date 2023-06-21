@@ -13,21 +13,21 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-
+<base href="<?= base_url()?>">
 <!-- Site Icons -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="shortcut icon" href="assets/user/images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="assets/user/images/apple-touch-icon.png">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/user/css/bootstrap.min.css">
 <!-- Site CSS -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/user/style.css">
 <!-- ALL VERSION CSS -->
-<link rel="stylesheet" href="css/versions.css">
+<link rel="stylesheet" href="assets/user/css/versions.css">
 <!-- Responsive CSS -->
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="assets/user/css/responsive.css">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="assets/user/css/custom.css">
 
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -66,7 +66,7 @@
     <header class="header header_style_01">
         <nav class="navbar header-nav navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="images/logos/logo-app.png" alt="image"></a>
+                <a class="navbar-brand" href="Views/index.php"><img src="assets/user/images/logos/logo-app.png" alt="image"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarApp"
                     aria-controls="navbarApp" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
@@ -89,7 +89,7 @@
         </nav>
     </header>
 
-    <div id="home" class="parallax first-section" style="background-image:url('uploads/bg-img.jpg');">
+    <div id="home" class="parallax first-section" style="background-image:url('assets/user/uploads/bg-img.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
@@ -173,35 +173,35 @@
                     <div class="phone-holder">
                         <div id="fon"></div>
                         <div class="hgh-linner hgi" data-index="0">
-                            <img width="190" height="320" src="uploads/carousel_01.jpg"
+                            <img width="190" height="320" src="assets/user/uploads/carousel_01.jpg"
                                 class="attachment-highlight wp-post-image" alt="screen" />
                         </div>
                         <div class="hgh-linner hgi" data-index="1">
-                            <img width="234" height="398" src="uploads/carousel_02.jpg"
+                            <img width="234" height="398" src="assets/user/uploads/carousel_02.jpg"
                                 class="attachment-highlight wp-post-image" alt="screensdst" />
                         </div>
                         <div class="hgh-linner hgi" data-index="2">
-                            <img width="234" height="398" src="uploads/carousel_03.jpg"
+                            <img width="234" height="398" src="assets/user/uploads/carousel_03.jpg"
                                 class="attachment-highlight wp-post-image" alt="screen_09" />
                         </div>
                         <div class="hgh-rinner hgi" data-index="3">
-                            <img width="234" height="398" src="uploads/carousel_04.jpg"
+                            <img width="234" height="398" src="assets/user/uploads/carousel_04.jpg"
                                 class="attachment-highlight wp-post-image" alt="screen_07" />
                         </div>
                         <div class="hgh-rinner hgi" data-index="4">
-                            <img width="234" height="398" src="uploads/carousel_01.jpg"
+                            <img width="234" height="398" src="assets/user/uploads/carousel_01.jpg"
                                 class="attachment-highlight wp-post-image" alt="screen_08" />
                         </div>
                         <div class="hgh-rinner hgi" data-index="5">
-                            <img width="234" height="398" src="uploads/carousel_01.jpg"
+                            <img width="234" height="398" src="assets/user/uploads/carousel_01.jpg"
                                 class="attachment-highlight wp-post-image" alt="screen_06" />
                         </div>
                         <div class="hgh-rinner hgi" data-index="6">
-                            <img width="234" height="398" src="uploads/carousel_02.jpg"
+                            <img width="234" height="398" src="assets/user/uploads/carousel_02.jpg"
                                 class="attachment-highlight wp-post-image" alt="screen_06" />
                         </div>
                         <div class="hgh-rinner hgi" data-index="7">
-                            <img width="234" height="398" src="uploads/carousel_03.jpg"
+                            <img width="234" height="398" src="assets/user/uploads/carousel_03.jpg"
                                 class="attachment-highlight wp-post-image" alt="screen_06" />
                         </div>
                     </div>
@@ -283,9 +283,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -294,9 +294,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -305,9 +305,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -316,9 +316,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -327,9 +327,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -338,9 +338,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -349,9 +349,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_01.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_01.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -360,9 +360,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_02.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_02.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -371,9 +371,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_03.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_03.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -382,9 +382,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_04.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_04.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -393,9 +393,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_05.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_05.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -404,9 +404,9 @@
                 <div class="owl-screen">
                     <div class="service-widget">
                         <div class="post-media entry wow fadeIn">
-                            <a href="uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
+                            <a href="assets/user/uploads/screenshot_06.png" data-rel="prettyPhoto[gal]"
                                 class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                            <img src="uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
+                            <img src="assets/user/uploads/screenshot_06.png" alt="" class="img-fluid img-rounded">
                             <div class="magnifier"></div>
                         </div>
                     </div><!-- end service -->
@@ -416,7 +416,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <div class="parallax section noover" style="background-image:url('uploads/ben_img.jpg');">
+    <div class="parallax section noover" style="background-image:url('assets/user/uploads/ben_img.jpg');">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-7 col-sm-12">
@@ -436,7 +436,7 @@
                 </div><!-- end col -->
                 <div class="col-md-6 iphones hidden-sm">
                     <div class="text-center move image-center hidden-sm hidden-xs">
-                        <img src="uploads/iphones.png" alt="" class="img-fluid wow fadeInUp">
+                        <img src="assets/user/uploads/iphones.png" alt="" class="img-fluid wow fadeInUp">
                     </div>
                 </div>
             </div><!-- end row -->
@@ -455,7 +455,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s"
                     data-wow-delay="0.2s">
                     <div class="widget clearfix">
-                        <img src="uploads/team_01.jpg" alt="" class="img-fluid rounded-circle">
+                        <img src="assets/user/uploads/team_01.jpg" alt="" class="img-fluid rounded-circle">
                         <div class="widget-title">
                             <h3>Soren Bo Bostian</h3>
                             <small>Senior Art Director</small>
@@ -475,7 +475,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s"
                     data-wow-delay="0.4s">
                     <div class="widget clearfix">
-                        <img src="uploads/team_02.jpg" alt="" class="img-fluid rounded-circle">
+                        <img src="assets/user/uploads/team_02.jpg" alt="" class="img-fluid rounded-circle">
                         <div class="widget-title">
                             <h3>Bryan Saftler</h3>
                             <small>Back End Developer</small>
@@ -495,7 +495,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s"
                     data-wow-delay="0.6s">
                     <div class="widget clearfix">
-                        <img src="uploads/team_03.jpg" alt="" class="img-fluid rounded-circle">
+                        <img src="assets/user/uploads/team_03.jpg" alt="" class="img-fluid rounded-circle">
                         <div class="widget-title">
                             <h3>Matthew Bayliss</h3>
                             <small>Front End Developer</small>
@@ -515,7 +515,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <div class="parallax section" style="background-image:url('uploads/ben_img_2.jpg');">
+    <div class="parallax section" style="background-image:url('assets/user/uploads/ben_img_2.jpg');">
         <div class="container">
             <div class="row text-left stat-wrap">
                 <div class="col-md-3 col-sm-6 col-xs-12">
@@ -655,7 +655,7 @@
                                     skilled, and experienced & professional team.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_01.png" alt="" class="img-fluid alignleft">
+                                <img src="assets/user/assets/user/assets/user/uploads/testi_01.png" alt="" class="img-fluid alignleft">
                                 <h4>James Fernando <small>- Manager of Racer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -669,7 +669,7 @@
                                     praising pain was born and I will give you completed.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-fluid alignleft">
+                                <img src="assets/user/uploads/testi_02.png" alt="" class="img-fluid alignleft">
                                 <h4>Jacques Philips <small>- Designer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -683,7 +683,7 @@
                                     pleasure itself, because it is very pursue pleasure. </p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_03.png" alt="" class="img-fluid alignleft">
+                                <img src="assets/user/uploads/testi_03.png" alt="" class="img-fluid alignleft">
                                 <h4>Venanda Mercy <small>- Newyork City</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -696,7 +696,7 @@
                                     skilled, and experienced & professional team.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_01.png" alt="" class="img-fluid alignleft">
+                                <img src="assets/user/uploads/testi_01.png" alt="" class="img-fluid alignleft">
                                 <h4>James Fernando <small>- Manager of Racer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -710,7 +710,7 @@
                                     praising pain was born and I will give you completed.</p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_02.png" alt="" class="img-fluid alignleft">
+                                <img src="assets/user/uploads/testi_02.png" alt="" class="img-fluid alignleft">
                                 <h4>Jacques Philips <small>- Designer</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -724,7 +724,7 @@
                                     pleasure itself, because it is very pursue pleasure. </p>
                             </div>
                             <div class="testi-meta">
-                                <img src="uploads/testi_03.png" alt="" class="img-fluid alignleft">
+                                <img src="assets/user/uploads/testi_03.png" alt="" class="img-fluid alignleft">
                                 <h4>Venanda Mercy <small>- Newyork City</small></h4>
                             </div>
                             <!-- end testi-meta -->
@@ -735,7 +735,7 @@
         </div><!-- end container -->
     </div><!-- end section -->
 
-    <div id="purchase" class="parallax section db" style="background-image:url('uploads/pr_bg.jpg');">
+    <div id="purchase" class="parallax section db" style="background-image:url('assets/user/uploads/pr_bg.jpg');">
         <div class="container">
             <div class="section-title text-center">
                 <h2>Bắt đầu chỉ với 0.00$</h2>
@@ -771,10 +771,10 @@
     </div><!-- end section -->
 
 
-    <div id="support" class="section" style="background-image:url('uploads/form_bg.jpg');">
+    <div id="support" class="section" style="background-image:url('assets/user/uploads/form_bg.jpg');">
         <div class="container">
             <div class="section-title text-center">
-                <h3>Liên hệ/h3>
+                <h3>Liên hệ</h3>
                     <div class="info-box" data-toggle="tooltip" data-placement="right"
                         title="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.">
                         <i class="fa fa-question-circle" aria-hidden="true"></i>
@@ -832,7 +832,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="widget clearfix">
                         <div class="widget-title">
-                            <img src="images/logos/logo-app.png" alt="">
+                            <img src="assets/user/images/logos/logo-app.png" alt="">
                             <small>App Landing Template</small>
                         </div>
                         <p> Appfast là nền tảng giúp bạn tạo ra ứng dụng di động đơn giản, nhanh chóng mà không cần kiến
@@ -906,10 +906,10 @@
     <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
     <!-- ALL JS FILES -->
-    <script src="js/all.js"></script>
+    <script src="assets/user/js/all.js"></script>
     <!-- ALL PLUGINS -->
-    <script src="js/custom.js"></script>
-    <script src="js/zenith.js"></script>
+    <script src="assets/user/js/custom.js"></script>
+    <script src="assets/user/js/zenith.js"></script>
     <script>
         $('#default').zenith({
             layout: 'default',
