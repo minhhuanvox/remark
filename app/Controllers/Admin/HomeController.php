@@ -8,8 +8,8 @@ class HomeController extends BaseController
     {
 
         $data = [];
-        $data = $this->loadMasterLayout($data);
-
-        return view('admin/pages/main', $data);
+        $data = $this->loadMasterLayout($data, 'Trang chủ', 'admin/pages/home');
+        
+        return view('admin/main', $data);
     }
 }
