@@ -13,7 +13,7 @@
             <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
                 <i class="fas fa-users"></i> Tài khoản </a>
             <div class="dash-nav-dropdown-menu">
-                <a href="user-list.html" class="dash-nav-dropdown-item">Danh sách</a>
+                <a href="admin/user/list" class="dash-nav-dropdown-item">Danh sách</a>
                 <a href="user-add.html" class="dash-nav-dropdown-item">Thêm mới</a>
             </div>
         </div>
