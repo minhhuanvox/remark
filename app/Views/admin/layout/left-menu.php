@@ -14,7 +14,7 @@
                 <i class="fas fa-users"></i> Tài khoản </a>
             <div class="dash-nav-dropdown-menu">
                 <a href="admin/user/list" class="dash-nav-dropdown-item">Danh sách</a>
-                <a href="user-add.html" class="dash-nav-dropdown-item">Thêm mới</a>
+                <a href="admin/user/add" class="dash-nav-dropdown-item">Thêm mới</a>
             </div>
         </div>
         <div class="dash-nav-dropdown">
