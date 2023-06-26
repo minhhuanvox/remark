@@ -4,7 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Services\UserService;
-
+use Symfony\Component\Console\Input\Input;
 
 class UserController extends BaseController
 {
@@ -45,5 +45,6 @@ class UserController extends BaseController
     public function create()
     {
         $result = $this->service->addUserInfo($this->request);
+        return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
     }
 }

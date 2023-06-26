@@ -3,6 +3,9 @@
 namespace App\Services;
 use CodeIgniter\Commands\Utilities\Publish;
 use App\Models\UserModel;
+use App\Common\ResulltUtils;
+use Exception;
+
 class UserService extends BaseService
 {
     private $users;
@@ -10,6 +13,7 @@ class UserService extends BaseService
     {
         parent::__construct();// run UserService and BaseService
         $this->users = new UserModel;
+        $this->users->protect(false);
     }
     
 
@@ -24,11 +28,37 @@ class UserService extends BaseService
     {
         $validate = $this->validateAddUser($requestData);
 
-        if ($validate->getError())
+        if ($validate->getErrors())
         {
-            dd($validate->getError());
+            // dd($validate->getErrors());
+            return [
+                'status' => ResulltUtils::STATUS_CODE_ERR,
+                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'messages'=> $validate->getErrors()
+            ];
         }
-        dd("Hết lỗi");
+
+        $dataSave = $requestData->getPost();
+        unset($dataSave['password_confirm']);
+        $dataSave['password'] = password_hash($dataSave['password'], PASSWORD_BCRYPT);
+        try{
+            $this->users->save($dataSave);
+            return [
+                'status' => ResulltUtils::STATUS_CODE_OK,
+                'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+                'messages'=> ['success'=>'Thêm dữ liệu thành công']
+            ];
+        }
+        catch(Exception $e){
+            return [
+                'status' => ResulltUtils::STATUS_CODE_ERR,
+                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'messages'=>['success'=>$e->getMessage()]
+            ];
+        }
+
+        
+        
     }
     private function validateAddUser($requestData)
     {
@@ -41,7 +71,7 @@ class UserService extends BaseService
         $messages = [
             'email' => [
                 'valid_email'=> 'Tài khoản {field} {value} không đúng định dạng!',
-                'id_unique'=> 'Email đã được đăng ký vui lòng kiểm tra lại'
+                'is_unique'=> 'Email đã được đăng ký vui lòng kiểm tra lại'
             ],
             'name' => [
                 'max_length'=> 'Tên quá dài. Vui lòng nhập {param} ký tự'
