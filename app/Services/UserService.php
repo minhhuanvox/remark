@@ -60,6 +60,12 @@ class UserService extends BaseService
         
         
     }
+    //get user by ID primary key
+    public function getUserByID($idUser)
+    {
+        return $this->users->where('id', $idUser)->first();
+    }
+
     private function validateAddUser($requestData)
     {
         $rule = [

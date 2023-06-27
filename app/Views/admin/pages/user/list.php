@@ -29,7 +29,7 @@
                                     <td><?= $user['email']?></td>
                                     
                                     <td class="text-center">
-                                        <a href="user-edit.html" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                        <a href="admin/user/edit/<?= $user['id']?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                         <a data-url="" class="btn btn-danger btn-del-confirm"><i
                                                 class="far fa-trash-alt"></i></a>
                                     </td>

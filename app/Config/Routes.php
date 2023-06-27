@@ -31,6 +31,9 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'User\HomeController::index');
+$routes->get('error/404', function(){
+    return view('errors/html/error_404');
+});
 
 $routes->group('admin', function($routes){
     $routes->get('home', 'Admin\HomeController::index');
@@ -38,6 +41,7 @@ $routes->group('admin', function($routes){
         $routes->get('list', 'Admin\UserController::list');
         $routes->get('add', 'Admin\UserController::add');
         $routes->post('create', 'Admin\UserController::create');
+        $routes->get('edit/(:num)', 'Admin\UserController::edit/$1');
     });
 });
 /*

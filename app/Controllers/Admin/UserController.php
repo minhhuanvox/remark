@@ -47,4 +47,18 @@ class UserController extends BaseController
         $result = $this->service->addUserInfo($this->request);
         return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
     }
+
+    public function edit($id)
+    {
+        $user = $this->service->getUserByID($id);
+        if(!$user)
+        {
+            return redirect('error/404');
+        }
+        
+        $data = [];
+        $data = $this->loadMasterLayout($data, 'Sửa tài khoản', 'admin/pages/user/edit');
+
+        return view('admin/main', $data);
+    }
 }
