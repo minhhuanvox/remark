@@ -15,17 +15,12 @@
                         <form action="admin/user/update" method="post">
                             <input name="id" hidden>
                             <div class="form-row">
-                                <div class="form-group col-md-8">
+                                <div class="form-group col-md-12">
                                     <label for="inputEmail4">Email</label>
                                     <input name="email" type="email" class="form-control" id="inputEmail4"
                                         placeholder="Email" required>
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label for="inputState">Quyền</label>
-                                    <select name="role" id="inputState" class="form-control" required>
-                                        <option selected>ADMIN</option>
-                                    </select>
-                                </div>
+
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress">Tên hiển thị</label>
