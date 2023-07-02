@@ -25,8 +25,8 @@ class UserController extends BaseController
         ];
         $jsFiles = [
             'http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js',
-            base_url() . '/assets/admin/js/datatable.js'
-
+            base_url() . '/assets/admin/js/datatable.js',
+            base_url() . '/assets/admin/js/event.js'
         ];
 
         $dataLayout['users'] = $this->service->getAllUsers();
@@ -75,5 +75,17 @@ class UserController extends BaseController
     {
         $result = $this->service->UpdateUserInfo($this->request);
         return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
+    }
+
+    public function delete($id)
+    {
+        $user = $this->service->getUserByID($id);
+
+        if(!$user)
+        {
+            return redirect('error/404');
+        }
+        $result = $this->service->deleteUser($id);
+        return redirect('admin/user/list')->with($result['messageCode'], $result['messages']);
     }
 }

@@ -12,3 +12,11 @@ function ShowChangePassword (status){
     $('#password').val(" ");
     $('#password-confirm').val("");
 }
+$('.btn-del-confirm').click(function(){
+    let url = $(this).data('url');
+    if(!confirm('Bạn có chắc chắn xoá không?'))
+    {
+        return ;
+    }
+    window.location.href = url;
+});

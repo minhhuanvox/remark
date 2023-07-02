@@ -168,4 +168,23 @@ class UserService extends BaseService
         $this->validation->withRequest($requestData)->run();
         return $this->validation;
     }
+    //
+    public function deleteUser($id)
+    {
+        try{
+            $this->users->delete($id);
+            return [
+                'status' => ResulltUtils::STATUS_CODE_OK,
+                'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+                'messages'=> ['success'=>'Thêm dữ liệu thành công']
+            ];
+        }
+        catch(Exception $e){
+            return [
+                'status' => ResulltUtils::STATUS_CODE_ERR,
+                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'messages'=>['success'=>$e->getMessage()]
+            ];
+        }
+    }
 }
