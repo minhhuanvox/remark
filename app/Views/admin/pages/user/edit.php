@@ -13,19 +13,19 @@
                     </div>
                     <div class="card-body ">
                         <form action="admin/user/update" method="post">
-                            <input name="id" hidden>
+                            <input name="id" value="<?= $users['id'] ?>" hidden>
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">Email</label>
                                     <input name="email" type="email" class="form-control" id="inputEmail4"
-                                        placeholder="Email" required>
+                                        placeholder="Email" required value="<?= $users['email'] ?>">
                                 </div>
 
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress">Tên hiển thị</label>
                                 <input name="name" type="text" class="form-control" id="inputAddress"
-                                    placeholder="Tên hiển thị người dùng" required>
+                                    placeholder="Tên hiển thị người dùng" required value="<?= $users['name'] ?>">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">

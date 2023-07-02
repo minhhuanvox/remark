@@ -51,14 +51,29 @@ class UserController extends BaseController
     public function edit($id)
     {
         $user = $this->service->getUserByID($id);
+
         if(!$user)
         {
             return redirect('error/404');
         }
         
         $data = [];
-        $data = $this->loadMasterLayout($data, 'Sửa tài khoản', 'admin/pages/user/edit');
+
+        $jsFiles = [
+            base_url() . '/assets/admin/js/event.js'
+
+        ];
+
+        $dataLayout['users'] = $user;
+
+        $data = $this->loadMasterLayout([], 'Sửa tài khoản', 'admin/pages/user/edit', $dataLayout,[], $jsFiles);
 
         return view('admin/main', $data);
+    }
+
+    public function update()
+    {
+        $result = $this->service->UpdateUserInfo($this->request);
+        return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
     }
 }
