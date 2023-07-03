@@ -176,7 +176,7 @@ class UserService extends BaseService
             return [
                 'status' => ResulltUtils::STATUS_CODE_OK,
                 'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
-                'messages'=> ['success'=>'Thêm dữ liệu thành công']
+                'messages'=> ['success'=>'Cập nhật dữ liệu thành công']
             ];
         }
         catch(Exception $e){
