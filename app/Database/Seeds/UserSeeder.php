@@ -21,6 +21,6 @@ class UserSeeder extends Seeder
             ]
 
         ];
-        $this->db->table('user')->insertBatch($data);
+        $this->db->table('users')->insertBatch($data);
     }
 }

@@ -45,6 +45,10 @@ $routes->group('admin', function($routes){
         $routes->post('update', 'Admin\UserController::update');
         $routes->get('delete/(:num)', 'Admin\UserController::delete/$1');
     });
+    $routes->group('purchase', function($routes){
+        $routes->get('list', 'Admin\PurchaseController::list');
+        
+    });
 });
 /*
  * --------------------------------------------------------------------
