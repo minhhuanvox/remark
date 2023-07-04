@@ -3,7 +3,7 @@
 namespace App\Services;
 use CodeIgniter\Commands\Utilities\Publish;
 use App\Models\UserModel;
-use App\Common\ResulltUtils;
+use App\Common\ResultUtils;
 use Exception;
 
 class UserService extends BaseService
@@ -32,8 +32,8 @@ class UserService extends BaseService
         {
             // dd($validate->getErrors());
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages'=> $validate->getErrors()
             ];
         }
@@ -44,15 +44,15 @@ class UserService extends BaseService
         try{
             $this->users->save($dataSave);
             return [
-                'status' => ResulltUtils::STATUS_CODE_OK,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+                'status' => ResultUtils::STATUS_CODE_OK,
+                'messageCode' => ResultUtils::MESSAGE_CODE_OK,
                 'messages'=> ['success'=>'Thêm dữ liệu thành công']
             ];
         }
         catch(Exception $e){
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages'=>['success'=>$e->getMessage()]
             ];
         }
@@ -70,8 +70,8 @@ class UserService extends BaseService
         {
             // dd($validate->getErrors());
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages'=> $validate->getErrors()
             ];
         }
@@ -91,8 +91,8 @@ class UserService extends BaseService
         
         $this->users->save($dataSave);
         return [
-            'status' => ResulltUtils::STATUS_CODE_OK,
-            'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+            'status' => ResultUtils::STATUS_CODE_OK,
+            'messageCode' => ResultUtils::MESSAGE_CODE_OK,
             'messages'=> ['success'=>'Cập nhật dữ liệu thành công']
         ];
     }
@@ -174,15 +174,15 @@ class UserService extends BaseService
         try{
             $this->users->delete($id);
             return [
-                'status' => ResulltUtils::STATUS_CODE_OK,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+                'status' => ResultUtils::STATUS_CODE_OK,
+                'messageCode' => ResultUtils::MESSAGE_CODE_OK,
                 'messages'=> ['success'=>'Cập nhật dữ liệu thành công']
             ];
         }
         catch(Exception $e){
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages'=>['success'=>$e->getMessage()]
             ];
         }

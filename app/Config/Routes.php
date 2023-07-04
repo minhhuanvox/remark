@@ -37,6 +37,8 @@ $routes->get('error/404', function(){
 
 $routes->group('admin', function($routes){
     $routes->get('home', 'Admin\HomeController::index');
+    $routes->get('login', 'Admin\LoginController::index');
+    $routes->post('login', 'Admin\LoginController::login');
     $routes->group('user', function($routes){
         $routes->get('list', 'Admin\UserController::list');
         $routes->get('add', 'Admin\UserController::add');

@@ -1,6 +1,6 @@
 <?php namespace App\Common;
 
-class ResulltUtils
+class ResultUtils
 {
     const STATUS_CODE_OK = 'OK';
     const STATUS_CODE_ERR = 'ERR';

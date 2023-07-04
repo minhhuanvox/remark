@@ -4,7 +4,7 @@ namespace App\Services;
 
 use CodeIgniter\Commands\Utilities\Publish;
 
-use App\Common\ResulltUtils;
+use App\Common\ResultUtils;
 use Exception;
 use App\Models\PurchaseModel;
 class PurchaseService extends BaseService
@@ -30,8 +30,8 @@ class PurchaseService extends BaseService
         if ($validate->getErrors()) {
             // dd($validate->getErrors());
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages' => $validate->getErrors()
             ];
         }
@@ -41,14 +41,14 @@ class PurchaseService extends BaseService
         try {
             $this->purchase->save($dataSave);
             return [
-                'status' => ResulltUtils::STATUS_CODE_OK,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+                'status' => ResultUtils::STATUS_CODE_OK,
+                'messageCode' => ResultUtils::MESSAGE_CODE_OK,
                 'messages' => ['success' => 'Thêm dữ liệu thành công']
             ];
         } catch (Exception $e) {
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages' => ['success' => $e->getMessage()]
             ];
         }
@@ -112,8 +112,8 @@ class PurchaseService extends BaseService
         {
             // dd($validate->getErrors());
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages'=> $validate->getErrors()
             ];
         }
@@ -123,15 +123,15 @@ class PurchaseService extends BaseService
         try{
             $this->purchase->save($dataSave);
             return [
-                'status' => ResulltUtils::STATUS_CODE_OK,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+                'status' => ResultUtils::STATUS_CODE_OK,
+                'messageCode' => ResultUtils::MESSAGE_CODE_OK,
                 'messages'=> ['success'=>'Cập nhật dữ liệu thành công']
             ];
         }
         catch(Exception $e){
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages'=>['success'=>$e->getMessage()]
             ];
         }
@@ -141,15 +141,15 @@ class PurchaseService extends BaseService
         try{
             $this->purchase->delete($id);
             return [
-                'status' => ResulltUtils::STATUS_CODE_OK,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_OK,
+                'status' => ResultUtils::STATUS_CODE_OK,
+                'messageCode' => ResultUtils::MESSAGE_CODE_OK,
                 'messages'=> ['success'=>'Cập nhật dữ liệu thành công']
             ];
         }
         catch(Exception $e){
             return [
-                'status' => ResulltUtils::STATUS_CODE_ERR,
-                'messageCode' => ResulltUtils::MESSAGE_CODE_ERR,
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages'=>['success'=>$e->getMessage()]
             ];
         }
