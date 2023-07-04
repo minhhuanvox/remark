@@ -29,63 +29,61 @@ class PurchaseController extends BaseController
             base_url() . '/assets/admin/js/event.js'
         ];
 
-        $dataLayout['purchases'] = [];
+        $dataLayout['purchases'] = $this->service->getAllPurchases();
         // $this->service->getAllUsers()
         $data = $this->loadMasterLayout($data, 'Danh sách gói dịch vụ', 'admin/pages/purchase/list', $dataLayout, $cssFiles, $jsFiles);
 
         return view('admin/main', $data);
     }
-    // public function add()
-    // {
-    //     $data = [];
-    //     $data = $this->loadMasterLayout($data, 'Thêm tài khoản', 'admin/pages/user/add');
+    public function add()
+    {
+        $data = [];
+        $data = $this->loadMasterLayout($data, 'Thêm gói dịch vụ', 'admin/pages/purchase/add');
 
-    //     return view('admin/main', $data);
-    // }
-    // public function create()
-    // {
-    //     $result = $this->service->addUserInfo($this->request);
-    //     return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
-    // }
+        return view('admin/main', $data);
+    }
+    public function create()
+    {
+        $result = $this->service->addPurchaseInfo($this->request);
+        return redirect('admin/purchase/add')->with($result['messageCode'], $result['messages']);
+    }
 
-    // public function edit($id)
-    // {
-    //     $user = $this->service->getUserByID($id);
+    public function edit($id)
+    {
+        $purchase = $this->service->getPurchaseByID($id);
 
-    //     if(!$user)
-    //     {
-    //         return redirect('error/404');
-    //     }
-        
-    //     $data = [];
+        if (!$purchase) {
+            return redirect('error/404');
+        }
 
-    //     $jsFiles = [
-    //         base_url() . '/assets/admin/js/event.js'
+        $data = [];
 
-    //     ];
+        $jsFiles = [
+            base_url() . '/assets/admin/js/event.js'
 
-    //     $dataLayout['users'] = $user;
+        ];
 
-    //     $data = $this->loadMasterLayout([], 'Sửa tài khoản', 'admin/pages/user/edit', $dataLayout,[], $jsFiles);
+        $dataLayout['purchase'] = $purchase;
 
-    //     return view('admin/main', $data);
-    // }
+        $data = $this->loadMasterLayout([], 'Sửa gói dịch vụ', 'admin/pages/purchase/edit', $dataLayout, [], $jsFiles);
 
-    // public function update()
-    // {
-    //     $result = $this->service->UpdateUserInfo($this->request);
-    //     return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
-    // }
+        return view('admin/main', $data);
+    }
 
-    // public function delete($id)
-    // {
-    //     $user = $this->service->getUserByID($id);
+    public function update()
+    {
+        $result = $this->service->UpdatePurchaseInfo($this->request);
+        return redirect()->back()->withInput()->with($result['messageCode'], $result['messages']);
+    }
 
-    //     if(!$user)
-    //     {
-    //         return redirect('error/404');
-    //     }
-    //     $result = $this->service->deleteUser($id);
-    //     return redirect('admin/user/list')->with($result['messageCode'], $result['messages']);
-    // }
+    public function delete($id)
+    {
+        $user = $this->service->getPurchaseByID($id);
+
+        if (!$user) {
+            return redirect('error/404');
+        }
+        $result = $this->service->deletePurchase($id);
+        return redirect('admin/purchase/list')->with($result['messageCode'], $result['messages']);
+    }
 }

@@ -25,22 +25,44 @@
                                 <th scope="col">Chức năng</th>
                             </tr>
                         </thead>
+
                         <tbody>
-                            <tr>
-                                <td>id</td>
-                                <td>name</td>
-                                <td>price</td>
-                                <td>emai_address</td>
-                                <td>storage</td>
-                                <td>databases</td>
-                                <td>domains</td>
-                                <td>support</td>
-                                <td class="text-center">
-                                    <a href="purchase-edit.html" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                    <a data-url="" class="btn btn-danger btn-del-confirm"><i
-                                            class="far fa-trash-alt"></i></a>
-                                </td>
-                            </tr>
+                            <?php foreach ($purchases as $purchase): ?>
+                                <tr>
+                                    <td>
+                                        <?= $purchase['id'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $purchase['name'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $purchase['price'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $purchase['email_address'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $purchase['storage'] ?>
+                                    </td><td>
+                                        <?= $purchase['databases'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $purchase['domains'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $purchase['support'] ?>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <a href="admin/purchase/edit/<?= $purchase['id'] ?>" class="btn btn-primary"><i
+                                                class="fas fa-edit"></i></a>
+                                        <a data-url="<?= base_url() ?>/admin/purchase/delete/<?= $purchase['id'] ?>"
+                                            class="btn btn-danger btn-del-confirm">
+                                            <i class="far fa-trash-alt"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>

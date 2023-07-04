@@ -47,7 +47,11 @@ $routes->group('admin', function($routes){
     });
     $routes->group('purchase', function($routes){
         $routes->get('list', 'Admin\PurchaseController::list');
-        
+        $routes->get('add', 'Admin\PurchaseController::add');
+        $routes->post('create', 'Admin\PurchaseController::create');
+        $routes->get('edit/(:num)', 'Admin\PurchaseController::edit/$1');
+        $routes->post('update', 'Admin\PurchaseController::update');
+        $routes->get('delete/(:num)', 'Admin\PurchaseController::delete/$1');
     });
 });
 /*

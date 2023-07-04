@@ -22,7 +22,7 @@
                 <i class="fas fa-cube"></i> Gói dịch vụ </a>
             <div class="dash-nav-dropdown-menu">
                 <a href="admin/purchase/list" class="dash-nav-dropdown-item">Danh sách</a>
-                <a href="purchase-add.html" class="dash-nav-dropdown-item">Thêm mới</a>
+                <a href="admin/purchase/add" class="dash-nav-dropdown-item">Thêm mới</a>
             </div>
         </div>
         <div class="dash-nav-dropdown">
