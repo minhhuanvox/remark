@@ -59,7 +59,6 @@ $routes->group('admin', ['filter'=>'adminFilter'], function ($routes) {
     });
     $routes->group('contact', function ($routes) {
         $routes->get('list', 'Admin\ContactController::list');
-        
     });
 });
 /*

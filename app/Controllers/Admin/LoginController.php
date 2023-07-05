@@ -10,9 +10,7 @@ use App\Services\LoginService;
 
 class LoginController extends BaseController
 {
-    /**
-     * @var Service
-     */
+    
     private $service;
     public function __construct()
     {

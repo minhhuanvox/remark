@@ -15,8 +15,6 @@ class PurchaseController extends BaseController
     }
     public function list()
     {
-
-
         $data = [];
 
         $cssFiles = [
@@ -30,7 +28,7 @@ class PurchaseController extends BaseController
         ];
 
         $dataLayout['purchases'] = $this->service->getAllPurchases();
-        // $this->service->getAllUsers()
+        
         $data = $this->loadMasterLayout($data, 'Danh sách gói dịch vụ', 'admin/pages/purchase/list', $dataLayout, $cssFiles, $jsFiles);
 
         return view('admin/main', $data);

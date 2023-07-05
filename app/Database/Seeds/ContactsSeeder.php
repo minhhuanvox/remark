@@ -16,7 +16,7 @@ class ContactsSeeder extends Seeder
                 'name' => 'James Fernando',
                 'email' => 'emailcontacts'.$i.'@gmail.com',
                 'phone' => '09778736'.$i,
-                'content' => 'Nội dung'.$i
+                'content' => 'Nội dung '.$i
             ]);
         }
         $this->db->table('contacts')->insertBatch($data);

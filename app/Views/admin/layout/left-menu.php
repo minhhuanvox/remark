@@ -3,11 +3,11 @@
         <a href="javascript::void()" class="menu-toggle">
             <i class="fas fa-bars"></i>
         </a>
-        <a href="assets/admin/index.html" class="easion-logo"><i class="fas fa-sun"></i>
+        <a href="admin/home" class="easion-logo"><i class="fas fa-sun"></i>
             <span>Appfast</span></a>
     </header>
     <nav class="dash-nav-list">
-        <a href="#" class="dash-nav-item">
+        <a href="admin/home" class="dash-nav-item">
             <i class="fas fa-home"></i> Thống kê </a>
         <div class="dash-nav-dropdown">
             <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
@@ -33,7 +33,7 @@
                 <a href="comment-add.html" class="dash-nav-dropdown-item">Thêm mới</a>
             </div>
         </div>
-        <a href="contacts.html" class="dash-nav-item">
+        <a href="admin/contact/list" class="dash-nav-item">
             <i class="fas fa-info"></i>Liên hệ
         </a>
     </nav>
