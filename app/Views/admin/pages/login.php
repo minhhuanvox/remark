@@ -22,7 +22,7 @@
             <div class="card-header bg-primary text-white" align="center"> Please sign in </div>
             <div class="card-body">
                 <?= view('messages/message'); ?>
-                    <form action="admin/login" method="POST">
+                    <form action="login" method="POST">
                     <div class="form-group">
                         <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>

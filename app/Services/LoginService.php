@@ -7,20 +7,22 @@ use CodeIgniter\Commands\Utilities\Publish;
 use App\Common\ResultUtils;
 use Exception;
 use App\Models\PurchaseModel;
+use App\Models\UserModel;
+use App\Models\User;
 
 class LoginService extends BaseService
 {
     private $purchase;
-    // private $users;
+    private $users;
     function __construct()
     {
         parent::__construct(); // run UserService and BaseService
-        $this->purchase = new PurchaseModel();
-        $this->purchase->protect(false);
+        $this->users = new UserModel();
+        // $this->purchase->protect(false);
     }
-    public function hasLoginInfo($requestData)
+    public function hasLoginInfo($reqData)
     {
-        $validate = $this->validateLogin($requestData);
+        $validate = $this->validateLogin($reqData);
 
         if ($validate->getErrors()) {
             return [
@@ -30,7 +32,39 @@ class LoginService extends BaseService
             ];
         }
 
-        
+        $params = $reqData->getPost();
+        $user = $this->users->where('email', $params['email'])->first();
+
+        if (!$user)
+        {
+            return [
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
+                'messages' => [
+                    'notExist'=>'Email chưa được đăng ký'
+                ]
+            ];
+        }
+        if(!password_verify($params['password'], $user['password']))
+        {
+            return [
+                'status' => ResultUtils::STATUS_CODE_ERR,
+                'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
+                'messages' => [
+                    'wrongPass'=>'Mật khẩu không đúng'
+                ]
+            ];
+        }
+        $session = session();
+
+        unset($user['password']);
+        $session->set('user_login', $user);
+
+        return [
+            'status' => ResultUtils::STATUS_CODE_OK,
+            'messageCode' => ResultUtils::MESSAGE_CODE_OK,
+            'messages' => null
+        ];
     }
 
     public function validateLogin($reqData)
@@ -51,5 +85,10 @@ class LoginService extends BaseService
         $this->validation->setRules($rule, $messages);
         $this->validation->withRequest($reqData)->run();
         return $this->validation;
+    }
+    public function logoutUser()
+    {
+        $session = session();
+        $session->destroy();//xoa toan bo session
     }
 }

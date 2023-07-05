@@ -10,5 +10,6 @@ class TestSeeder extends Seeder
     {
         $this->call('UserSeeder');
         $this->call('PurchaseSeeder');
+        $this->call('ContactsSeeder');
     }
 }
