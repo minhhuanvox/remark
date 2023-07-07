@@ -18,6 +18,10 @@ class ContactService extends BaseService
     }
     public function getDataPaginationContact()
     {
-        return $this->contact->orderBy('id', 'DESC')->paginate(10);
+        return $this->contact->orderBy('id', 'DESC')->paginate(2);
+    }
+    public function getPagerContact()
+    {
+        return $this->contact->pager;
     }
 }

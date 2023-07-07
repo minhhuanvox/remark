@@ -28,7 +28,8 @@ class ContactController extends BaseController
         ];
 
         $dataLayout['contacts'] = $this->service->getDataPaginationContact();
-        // dd($dataLayout['purchases']);
+        $dataLayout['pager'] = $this->service->getPagerContact();
+        // dd($dataLayout['pager']);
         $data = $this->loadMasterLayout($data, 'Danh sách liên hệ', 'admin/pages/contact/list', $dataLayout, $cssFiles, $jsFiles);
 
         return view('admin/main', $data);
