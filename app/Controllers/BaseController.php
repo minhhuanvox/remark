@@ -67,4 +67,19 @@ abstract class BaseController extends Controller
         $data['content'] = view($content, $dataLayout);
         return $data;
     }
+    protected function isAdmin()
+    {
+        // Kiểm tra xem người dùng đã đăng nhập hay chưa
+        if (session()->has('user_login')) {
+            // Lấy thông tin người dùng từ session
+            $user = session('user_login');
+
+            // Kiểm tra nếu role của người dùng là 'admin'
+            if ($user['role'] === 'admin') {
+                return true; // Nếu là admin, trả về true
+            }
+        }
+
+        return false; // Nếu không phải admin hoặc chưa đăng nhập, trả về false
+    }
 }

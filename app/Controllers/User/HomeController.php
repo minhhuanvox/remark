@@ -6,6 +6,10 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        return view('index');
+
+        $data = [];
+        $data = $this->loadMasterLayout($data, 'Trang chủ', 'index');
+        
+        return view('index', $data);
     }
 }

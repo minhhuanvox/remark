@@ -8883,7 +8883,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 30px; }
   .easion-card .card-header {
     min-height: 57px;
-    background-color: #F0F1F7;
+    background-color: white;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

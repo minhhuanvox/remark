@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'democodeigniter4',
+        'database' => 'phuckhao',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

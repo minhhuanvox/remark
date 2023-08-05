@@ -41,7 +41,7 @@ class LoginService extends BaseService
                 'status' => ResultUtils::STATUS_CODE_ERR,
                 'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages' => [
-                    'notExist'=>'Email chưa được đăng ký'
+                    'notExist'=>'Tài khoản không hợp lệ'
                 ]
             ];
         }

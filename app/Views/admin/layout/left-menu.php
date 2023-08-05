@@ -1,40 +1,26 @@
 <div class="dash-nav dash-nav-dark">
     <header>
         <a href="javascript::void()" class="menu-toggle">
-            <i class="fas fa-bars"></i>
+
+            <img src="./assets/images/logo.png" alt="logo" class="banner-left__logo" width="32" />
+
         </a>
-        <a href="admin/home" class="easion-logo"><i class="fas fa-sun"></i>
-            <span>Appfast</span></a>
+        <a href="admin/home" class="easion-logo" href="/assets/images/logo.png"><img src="/assets/images/logo.png "
+                width="24" height="24">
+            <span>SGU</span></a>
     </header>
     <nav class="dash-nav-list">
         <a href="admin/home" class="dash-nav-item">
             <i class="fas fa-home"></i> Thống kê </a>
         <div class="dash-nav-dropdown">
             <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
-                <i class="fas fa-users"></i> Tài khoản </a>
+                <i class="fas fa-users"></i> Phúc khảo </a>
             <div class="dash-nav-dropdown-menu">
-                <a href="admin/user/list" class="dash-nav-dropdown-item">Danh sách</a>
-                <a href="admin/user/add" class="dash-nav-dropdown-item">Thêm mới</a>
+                <a href="admin/remark/list" class="dash-nav-dropdown-item">Danh sách</a>
+                <a href="admin/remark/add" class="dash-nav-dropdown-item">Thêm mới</a>
             </div>
         </div>
-        <div class="dash-nav-dropdown">
-            <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
-                <i class="fas fa-cube"></i> Gói dịch vụ </a>
-            <div class="dash-nav-dropdown-menu">
-                <a href="admin/purchase/list" class="dash-nav-dropdown-item">Danh sách</a>
-                <a href="admin/purchase/add" class="dash-nav-dropdown-item">Thêm mới</a>
-            </div>
-        </div>
-        <div class="dash-nav-dropdown">
-            <a href="javascript::void(0)" class="dash-nav-item dash-nav-dropdown-toggle">
-                <i class="fas fa-comments"></i> Đánh giá </a>
-            <div class="dash-nav-dropdown-menu">
-                <a href="comment-list.html" class="dash-nav-dropdown-item">Danh sách</a>
-                <a href="comment-add.html" class="dash-nav-dropdown-item">Thêm mới</a>
-            </div>
-        </div>
-        <a href="admin/contact/list" class="dash-nav-item">
-            <i class="fas fa-info"></i>Liên hệ
-        </a>
+        <a class="dash-nav-item" href="admin/logout"><i class="fas fa-sign-out-alt"></i>
+            Đăng xuất</a>
     </nav>
 </div>

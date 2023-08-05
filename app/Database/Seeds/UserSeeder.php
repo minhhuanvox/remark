@@ -15,9 +15,9 @@ class UserSeeder extends Seeder
                 'name' => "Tài khoản quản trị"
             ],
             [
-                'email'=> 'user@gmail.com',
-                'password'=> password_hash('123123', PASSWORD_BCRYPT),
-                'name' => "Tài khoản người dùng"
+                'email'=> 'minhhuan@gmail.com',
+                'password'=> password_hash('admin123', PASSWORD_BCRYPT),
+                'name' => "Minh Huan Vo"
             ]
 
         ];
