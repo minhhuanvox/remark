@@ -15,14 +15,14 @@
                                 <i class="fas fa-inbox"></i>
                             </div>
                             <div class="notification-text">Thông báo mới</div>
-                            <span class="notification-time">21 giờ trước</span>
+                            <span class="notification-time">16 giờ trước</span>
                         </a>
                         <a href="javascript::void()" class="notification">
                             <div class="notification-icon">
                                 <i class="fas fa-inbox"></i>
                             </div>
                             <div class="notification-text">Thông báo mới</div>
-                            <span class="notification-time">21 giờ trước</span>
+                            <span class="notification-time">12 giờ trước</span>
                         </a>
                         <a href="javascript::void()" class="notification">
                             <div class="notification-icon">

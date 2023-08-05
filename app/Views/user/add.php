@@ -109,8 +109,7 @@
                   <option value="Học kỳ 2">Học kỳ 2</option>
                   <option value="Học kỳ 3">Học kỳ 3</option>
                 </select>
-                <!-- <input type="text" name="semester" 
-                  class="formbold-form-input" placeholder="Học kỳ 1" required/> -->
+                
               </div>
               <div>
                 <label class="formbold-form-label">Năm học:</label>
@@ -119,37 +118,10 @@
                   <option value="2024">2024 - 2025</option>
                   <option value="2025">2025 - 2026</option>
                 </select>
-                <!-- <input type="text" name="school_year" 
-                  class="formbold-form-input" placeholder="2023-2024" required/> -->
+                
               </div>
             </div>
-            <!-- Row 5 Upload file-->
-            <!-- <div class="formbold-form-file-flex">
-                <label for="upload" class="formbold-form-label">
-                  Upload Resume
-                </label>
-                <input
-                  type="file"
-                  name="upload"
-                  
-                  class="formbold-form-file"
-                />
-              </div> -->
-            <!-- Search -->
-            <!-- <div class="row">
-              <div class="mx-auto">
-                <label for="" class="formbold-form-label">Tìm kiếm học phần:</label>
-                <div class="input-group">
-                  <input class="form-control border-end-0 border rounded-pill" type="search" value="Tìm kiếm học phần"
-                     />
-                  <span class="input-group-append">
-                    <button class="btn btn-outline-secondary border-bottom-0 border ms-n5" type="button">
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </span>
-                </div>
-              </div>
-            </div> -->
+            
             <!-- Table -->
             <table class="table">
               <thead class="table-light">
@@ -171,26 +143,11 @@
                   <td><input type="text" name="exam_room" class="formborder" required></td>
                   <td><input type="number" step="0.01" name="score" min="0" max="10" class="formborder" required></td>
                 </tr>
-                <!-- <tr>
-                  <th scope="row">2</th>
-                  <td><input type="numbe" name="ma_hoc_phan" ></td>
-                  <td><input type="text" name="ten_hoc_phan" ></td>
-                  <td><input type="date" name="ngay_thi" ></td>
-                  <td><input type="text" name="phong_thi" ></td>
-                  <td><input type="number" step="0.01" name="diem"></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td><input type="numbe" name="ma_hoc_phan" ></td>
-                  <td><input type="text" name="ten_hoc_phan" ></td>
-                  <td><input type="date" name="ngay_thi" ></td>
-                  <td><input type="text" name="phong_thi" ></td>
-                  <td><input type="number" step="0.01" name="diem"></td>
-                </tr> -->
+                
               </tbody>
             </table>
             <div class="row btn-register">
-              <!-- <a href="#" class="btn btn-primary btn-login" type="submit">Đăng ký</a> -->
+              
               <button type="submit" class="btn btn-success">Đăng ký</button>
             </div>
           </form>

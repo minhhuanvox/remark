@@ -74,7 +74,7 @@
                     </div>
                     <!-- End menu bottom -->
                 </div>
-                <!-- <img src="https://ctsv.sgu.edu.vn/hssv/banner.png" width="800" /> -->
+                
                 <H2 class="w3-text-blue p-2 banner-right__title"> TRANG TIN ĐĂNG KÍ PHÚC KHẢO </H2>
 
                                <BR />
@@ -87,19 +87,16 @@
                     </span> </H4>
                 <BR />
                 <form action="user/add" method="POST">
-                    <!-- <p><input type="hidden" name="hoten" placeholder="Võ Minh Huân" /></p>
-                    <p><input type="hidden" name="masv" placeholder="3119560024" /></p>
-                    <p><input type="hidden" name="loaisv" placeholder="1" /></p> -->
+                    
                     <p>Chọn biểu mẫu:
                         <select name="loaixacnhan" class="w3-border">
                             <option value="dkpkmh">Đăng ký phúc khảo bài thi</option>
-                            <!-- <option value="nvqs">Giấy xác nhận NVQS</option>
-                            <option value="vayvon">Giấy xác nhận vay vốn</option> -->
+                            
 
                         </select>
                     </p>
                     <p>
-                        <input type="submit" value="Đăng ký phúc khảo" class="w3-button w3-green" />
+                        
                         <a type="submit" class="btn btn-success" href="user/add">Đăng ký phúc khảo</a>
                     </p>
                 </form>
