@@ -24,7 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
 </head>
 
-<body style="width: 70%; margin: 0 auto">
+<body >
     <artical>
         <div class="w3-row">
             <div class="w3-container w3-padding-large">
@@ -83,7 +83,7 @@
                         <?= session()->get('user_login') ? session()->get('user_login')['name'] : "" ?>
                     </span> </H4>
                 <BR />
-                <form action="user/add" method="POST">
+                <!-- <form action="user/add" method="POST"> -->
 
                     <p>Chọn biểu mẫu:
                         <select name="loaixacnhan" class="w3-border">
@@ -94,7 +94,7 @@
 
                         <a type="submit" class="btn btn-success" href="user/add">Đăng ký phúc khảo</a>
                     </p>
-                </form>
+                <!-- </form> -->
                 <p>
                     <a href="admin/logout">Đăng xuất</a>
                 </p>
