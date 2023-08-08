@@ -14,4 +14,6 @@ lệnh trên sẽ chạy 2 cái Seeds RemarkSeed và UserSeed cùng 1 lúc nên 
 
 Run website 
 php spark serve
+Giao diện trang chủ
+![image](https://github.com/minhhuanvox/remark/assets/102376732/715fbc9a-0c39-4f85-8ce4-9950c74e6b5b)
 
