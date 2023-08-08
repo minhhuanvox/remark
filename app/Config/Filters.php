@@ -22,7 +22,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'adminFilter' => AuthFilter::class,
+        'adminFilter'   => AuthFilter::class,
         'noauth'        => NoAuthFilter::class,
     ];
 

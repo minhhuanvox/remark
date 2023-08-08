@@ -74,35 +74,28 @@
                     </div>
                     <!-- End menu bottom -->
                 </div>
-                
+
                 <H2 class="w3-text-blue p-2 banner-right__title"> TRANG TIN ĐĂNG KÍ PHÚC KHẢO </H2>
 
-                               <BR />
-
-
-
+                <BR />
                 <H4>
                     Xin chào <span class='w3-text-red'>
                         <?= session()->get('user_login') ? session()->get('user_login')['name'] : "" ?>
                     </span> </H4>
                 <BR />
                 <form action="user/add" method="POST">
-                    
+
                     <p>Chọn biểu mẫu:
                         <select name="loaixacnhan" class="w3-border">
                             <option value="dkpkmh">Đăng ký phúc khảo bài thi</option>
-                            
-
                         </select>
                     </p>
                     <p>
-                        
+
                         <a type="submit" class="btn btn-success" href="user/add">Đăng ký phúc khảo</a>
                     </p>
                 </form>
                 <p>
-
-                    <!-- <a href="/" target="_self" title="Trang chính">Trang chính</a> -->
                     <a href="admin/logout">Đăng xuất</a>
                 </p>
 

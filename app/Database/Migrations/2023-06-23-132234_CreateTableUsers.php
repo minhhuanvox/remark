@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Database\Migrations;
-
 use CodeIgniter\Database\Migration;
 
 class CreateTableUsers extends Migration
@@ -27,6 +26,10 @@ class CreateTableUsers extends Migration
             'name' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,
+            ],
+            'role' => [
+                'type' => 'ENUM("admin","user")',
+                'default' => 'user',
             ],
         ]);
         $this->forge->addKey('id', true);

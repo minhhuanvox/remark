@@ -10,14 +10,16 @@ class UserSeeder extends Seeder
     {
         $data = [
             [
-                'email'=> 'admin@gmail.com',
-                'password'=> password_hash('123123', PASSWORD_BCRYPT),
-                'name' => "Tài khoản quản trị"
+                'email'     => 'admin@gmail.com',
+                'password'  => password_hash('123123', PASSWORD_BCRYPT),
+                'name'      => "Tài khoản quản trị",
+                'role'      => 'admin'
             ],
             [
                 'email'=> 'minhhuan@gmail.com',
                 'password'=> password_hash('admin123', PASSWORD_BCRYPT),
-                'name' => "Minh Huan Vo"
+                'name' => "Minh Huan Vo",
+                'role'      => 'user'
             ]
 
         ];

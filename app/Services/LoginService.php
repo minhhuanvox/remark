@@ -41,7 +41,7 @@ class LoginService extends BaseService
                 'status' => ResultUtils::STATUS_CODE_ERR,
                 'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages' => [
-                    'notExist'=>'Tài khoản không hợp lệ'
+                    'notExist'=>'Tài khoản hoặc mật khẩu không hợp lệ'
                 ]
             ];
         }
@@ -51,7 +51,7 @@ class LoginService extends BaseService
                 'status' => ResultUtils::STATUS_CODE_ERR,
                 'messageCode' => ResultUtils::MESSAGE_CODE_ERR,
                 'messages' => [
-                    'wrongPass'=>'Mật khẩu không đúng'
+                    'wrongPass'=>'Mật khẩu hoặc tài khoản không đúng'
                 ]
             ];
         }

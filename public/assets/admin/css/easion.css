@@ -68,7 +68,7 @@ body {
   line-height: 1.5;
   color: #515151;
   text-align: left;
-  background-color: #fff; }
+  background-color: #ffffff; }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -8963,7 +8963,7 @@ h1 {
   margin-left: 7px; }
 
 body {
-  background: #E9EDF4; }
+  background: #ffffff; }
 
 .dash {
   display: -webkit-box;

@@ -4,8 +4,6 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Services\RemarkService;
-use App\Models\RemarkModel;
-use Symfony\Component\Console\Input\Input;
 
 class RemarkController extends BaseController
 {
@@ -16,7 +14,6 @@ class RemarkController extends BaseController
     }
     public function list()
     {
-
 
         $data = [];
 
@@ -40,13 +37,11 @@ class RemarkController extends BaseController
     {
         $data = [];
         $data = $this->loadMasterLayout($data, 'Thêm đơn phúc khảo', 'admin/pages/remark/add');
-        // dd($data);
         return view('admin/main', $data);
     }
     public function create()
     {
         $result = $this->service->addRemarkInfo($this->request);
-        // dd($result);
         return redirect('admin/remark/add')->with($result['messageCode'], $result['messages']);
     }
     
@@ -64,7 +59,6 @@ class RemarkController extends BaseController
 
         $jsFiles = [
             base_url() . '/assets/admin/js/event.js'
-
         ];
 
         $dataLayout['remarks'] = $remark;
