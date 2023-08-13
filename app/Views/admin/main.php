@@ -30,7 +30,7 @@
 <body>
     <div class="dash">
         <?= $leftMenu ?>
-
+        
         <div class="dash-app">
             <?= $header ?>
 
